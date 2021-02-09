@@ -1,7 +1,7 @@
 FROM buildpack-deps:stretch
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-                python python-dev python-pip openssh-client \
+                python python-dev python-pip python-dnspython openssh-client \
   && pip install pip setuptools --upgrade \
   && pip install ansible \
   && rm -rf /var/lib/apt/lists/*
